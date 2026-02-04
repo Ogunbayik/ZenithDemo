@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|c:\\users\\ogun\\unityprojects\\zenithdemo\\assets\\scripts\\throwcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\throwcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThrowController.cs",
+              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\ThrowController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ThrowController.cs",
+              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\ThrowController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ThrowController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwGsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T19:37:27.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
