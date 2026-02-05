@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|c:\\users\\ogun\\unityprojects\\zenithdemo\\assets\\scripts\\throwcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\throwcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|c:\\users\\ogun\\unityprojects\\zenithdemo\\assets\\scripts\\mergedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mergedobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\assets\\scripts\\installers\\poolinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\installers\\poolinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|c:\\users\\ogun\\unityprojects\\zenithdemo\\assets\\scripts\\mergedobjectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mergedobjectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\assets\\scripts\\launchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{611950EE-3833-2263-C82A-D1498C4971AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\launchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ThrowController.cs",
-              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\ThrowController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ThrowController.cs",
-              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\ThrowController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ThrowController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MergedObjectFactory.cs",
+              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\MergedObjectFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MergedObjectFactory.cs",
+              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\MergedObjectFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MergedObjectFactory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAACGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T19:37:27.413Z",
+              "WhenOpened": "2026-02-05T15:12:37.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MergedObject.cs",
+              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\MergedObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MergedObject.cs",
+              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\MergedObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MergedObject.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T12:22:39.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SpawnManager.cs",
-              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\SpawnManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnManager.cs",
-              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\SpawnManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SpawnManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "PoolInstaller.cs",
+              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\Installers\\PoolInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Installers\\PoolInstaller.cs",
+              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\Installers\\PoolInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Installers\\PoolInstaller.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T14:28:30.541Z"
+              "WhenOpened": "2026-02-05T12:45:35.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LaunchController.cs",
+              "DocumentMoniker": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\LaunchController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LaunchController.cs",
+              "ToolTip": "C:\\Users\\ogun\\UnityProjects\\ZenithDemo\\Assets\\Scripts\\LaunchController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LaunchController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwEkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T19:37:27.413Z",
+              "EditorCaption": ""
             }
           ]
         }

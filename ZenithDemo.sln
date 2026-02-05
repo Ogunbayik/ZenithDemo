@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-ReflectionBaking-Ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-Editor", "Zenject-Editor.csproj", "{5C6839AA-8B7E-E017-F60B-FB3238F7BD03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-TestFramework", "Zenject-TestFramework.csproj", "{688EA373-9EA3-6E8D-B76E-99B85E35D743}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{611950EE-3833-2263-C82A-D1498C4971AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-TestFramework", "Zenject-TestFramework.csproj", "{688EA373-9EA3-6E8D-B76E-99B85E35D743}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-PoolMonitor-Editor", "Zenject-PoolMonitor-Editor.csproj", "{279E597B-BD0D-C6ED-A307-8C30284B4DFD}"
 EndProject
@@ -49,14 +49,14 @@ Global
 		{5C6839AA-8B7E-E017-F60B-FB3238F7BD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6839AA-8B7E-E017-F60B-FB3238F7BD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6839AA-8B7E-E017-F60B-FB3238F7BD03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Release|Any CPU.Build.0 = Release|Any CPU
 		{611950EE-3833-2263-C82A-D1498C4971AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{611950EE-3833-2263-C82A-D1498C4971AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611950EE-3833-2263-C82A-D1498C4971AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611950EE-3833-2263-C82A-D1498C4971AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688EA373-9EA3-6E8D-B76E-99B85E35D743}.Release|Any CPU.Build.0 = Release|Any CPU
 		{279E597B-BD0D-C6ED-A307-8C30284B4DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{279E597B-BD0D-C6ED-A307-8C30284B4DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{279E597B-BD0D-C6ED-A307-8C30284B4DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
