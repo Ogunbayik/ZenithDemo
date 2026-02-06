@@ -9,13 +9,14 @@ public class MergedObjectFactory
     private readonly MergedObject.Pool _pearPool;
     private readonly MergedObject.Pool _bananaPool;
 
-    public MergedObjectFactory([Inject(Id = 0)]MergedObject.Pool applePool,[Inject(Id = 1)] MergedObject.Pool pearPool, [Inject(Id = 2)]MergedObject.Pool bananaPool)
+    public MergedObjectFactory([Inject(Id = GameConstant.MergedObjectIndex.APPLE_INDEX)] MergedObject.Pool applePool,
+        [Inject(Id = GameConstant.MergedObjectIndex.PEAR_INDEX)] MergedObject.Pool pearPool,
+        [Inject(Id = GameConstant.MergedObjectIndex.BANANA_INDEX)] MergedObject.Pool bananaPool)
     {
         _applePool = applePool;
         _pearPool = pearPool;
         _bananaPool = bananaPool;
     }
-
     public MergedObject Spawn(int id)
     {
         MergedObject mergedObject = null;

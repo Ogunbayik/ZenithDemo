@@ -1,31 +1,34 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class LaunchController : MonoBehaviour
 {
-    private const int MAX_CHANCE = 100;
+    private MergedObjectFactory _factory;
 
     [Header("Visual Settings")]
-    [SerializeField] private GameObject _testLauchPoint;
+    [SerializeField] private Transform _launchPosition;
     [SerializeField] private int _moveRange;
     [SerializeField] private LayerMask _groundLayer;
-    [Header("Prefab Settings")]
-    [SerializeField] private List<GameObject> _prefabList = new List<GameObject>();
-    [SerializeField] private int _prefabIndex;
     [Header("Upgrade Settings")]
-    [SerializeField] private int _upgradeCount;
-    [SerializeField] private int _upgradeChance;
-    [SerializeField] private int _decreaseChance;
+    [SerializeField] private int _maxSpawnIndex;
+    [SerializeField] private int _successPercentage;
+    [SerializeField] private int _decreasePercentage;
+    [Header("Force Settings")]
+    [SerializeField] private float _forceMagnitude;
 
-    private Func<int, int, bool> CanSpawnNext;
+    private Func<int, int, bool> _canSpawnNext;
 
-    private GameObject _randomPrefab;
+    private MergedObject _mergedObject;
+
+    private int _prefabIndex;
+
+    [Inject]
+    public void Construct(MergedObjectFactory factory) => _factory = factory;
     private void Start() => InitialSettings();
     private void InitialSettings()
     {
-        CanSpawnNext = (randomChance, upgradeChance) => randomChance <= upgradeChance;
+        _canSpawnNext = (percentage, successPercentage) => percentage <= successPercentage;
     }
     private void Update()
     {
@@ -39,8 +42,8 @@ public class LaunchController : MonoBehaviour
             {
                 //Object only moving X Axis
                 var desiredPosition = new Vector3(hit.point.x, 0f, 0f);
-                _testLauchPoint.transform.position = desiredPosition;
-                CreateRandomPrefab(desiredPosition);
+                _launchPosition.position = desiredPosition;
+                CreatePrefab(desiredPosition);
             }
         }
         else if(Input.GetMouseButton(0))
@@ -51,12 +54,12 @@ public class LaunchController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, _groundLayer))
             {
-                _testLauchPoint.transform.position = new Vector3(hit.point.x, 0f, 0f);
+                _launchPosition.position = new Vector3(hit.point.x, 0f, 0f);
 
                 if (hit.point.x >= _moveRange)
-                    _testLauchPoint.transform.position = new Vector3(_moveRange, 0f, 0f);
+                    _launchPosition.position = new Vector3(_moveRange, 0f, 0f);
                 else if (hit.point.x <= -_moveRange)
-                    _testLauchPoint.transform.position = new Vector3(-_moveRange, 0f, 0f);
+                    _launchPosition.position = new Vector3(-_moveRange, 0f, 0f);
             }
         }
         else if(Input.GetMouseButtonUp(0))
@@ -68,24 +71,35 @@ public class LaunchController : MonoBehaviour
             {
                 Debug.Log($"Player send object {hit.point}");
                 if (hit.point.x >= _moveRange)
-                    _testLauchPoint.transform.position = new Vector3(_moveRange, 0f, 0f);
+                    _launchPosition.position = new Vector3(_moveRange, 0f, 0f);
                 else if (hit.point.x <= -_moveRange)
-                    _testLauchPoint.transform.position = new Vector3(-_moveRange, 0f, 0f);
-                _randomPrefab.transform.SetParent(null);
+                    _launchPosition.position = new Vector3(-_moveRange, 0f, 0f);
+
+                _mergedObject.Launch(_forceMagnitude);
+                _mergedObject.transform.SetParent(null);
             }
         }
     }
-    private void CreateRandomPrefab(Vector3 spawnPosition)
+    private void CreatePrefab(Vector3 spawnPosition)
     {
-        for (int i = 0; i < _upgradeCount; i++)
+        CalculateChanceToNext();
+
+        _mergedObject = _factory.Spawn(_prefabIndex);
+        _mergedObject.transform.position = spawnPosition;
+        _mergedObject.transform.SetParent(_launchPosition.transform);
+        ResetUpgradeSettings();
+    }
+    private void CalculateChanceToNext()
+    {
+        for (int i = 0; i < _maxSpawnIndex; i++)
         {
-            var chance = GetRandomChance();
-            Debug.Log($"Current Chance is {chance}");
-            if (CanSpawnNext(chance, _upgradeChance))
+            var currentPercentage = GetRandomChance();
+            Debug.Log($"Current Chance is {currentPercentage}..");
+            if (_canSpawnNext(currentPercentage, _successPercentage))
             {
                 DecreaseUpgradeChance();
                 IncreasePrefabIndex();
-                Debug.Log($"Upgrade is Succesfull");
+                Debug.Log("Upgrade is succesfull!");
             }
             else
             {
@@ -93,21 +107,16 @@ public class LaunchController : MonoBehaviour
                 break;
             }
         }
-
-        _randomPrefab = Instantiate(_prefabList[_prefabIndex]);
-        _randomPrefab.transform.position = spawnPosition;
-        _randomPrefab.transform.SetParent(_testLauchPoint.transform);
-        ResetUpgradeSettings();
     }
-    private void DecreaseUpgradeChance() => _upgradeChance -= _decreaseChance;
+    private void DecreaseUpgradeChance() => _successPercentage -= _decreasePercentage;
     private void IncreasePrefabIndex() => _prefabIndex++;
     private void ResetUpgradeSettings()
     {
-        _upgradeChance = 30;
+        _successPercentage = 30;
         _prefabIndex = 0;
     }
     private int GetRandomChance()
     {
-        return UnityEngine.Random.Range(0, MAX_CHANCE);
+        return UnityEngine.Random.Range(0, GameConstant.GameSettings.MAX_CHANCE);
     }
 }
